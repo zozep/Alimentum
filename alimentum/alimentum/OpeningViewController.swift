@@ -36,9 +36,9 @@ class OpeningViewController: UIViewController, IntroPageViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //If passed in segue has destinationViewController of type PageViewController, declare self (OpeningViewController) as viewDelegate
-        if let pageViewController = segue.destinationViewController as? IntroPageViewController {
+        if let pageViewController = segue.destination as? IntroPageViewController {
             pageViewController.viewDelegate = self
         }
     }
@@ -46,11 +46,11 @@ class OpeningViewController: UIViewController, IntroPageViewControllerDelegate {
     
 //MARK: - Functions conforming OpeningViewController class to protocol IntroPageViewControllerDelegate
     
-    func introPageViewController(pageViewController: IntroPageViewController, didUpdatePageCount count: Int) {
+    func introPageViewController(_ pageViewController: IntroPageViewController, didUpdatePageCount count: Int) {
         pageControl.numberOfPages = count
     }
     
-    func introPageViewController(pageViewController: IntroPageViewController, didUpdatePageIndex index: Int) {
+    func introPageViewController(_ pageViewController: IntroPageViewController, didUpdatePageIndex index: Int) {
         pageControl.currentPage = index
     }
 
@@ -62,7 +62,7 @@ class OpeningViewController: UIViewController, IntroPageViewControllerDelegate {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "rest.png")!)
         let background = CAGradientLayer().turquoiseColor()
         background.frame = self.view.bounds
-        self.view.layer.insertSublayer(background, atIndex: 0)
+        self.view.layer.insertSublayer(background, at: 0)
     }
 }
 

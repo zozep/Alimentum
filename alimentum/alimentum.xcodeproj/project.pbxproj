@@ -14,7 +14,7 @@
 		7C1DA9B01CAB84FB001172AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1DA9AE1CAB84FB001172AA /* LaunchScreen.storyboard */; };
 		7C1DA9BB1CAB84FB001172AA /* alimentumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1DA9BA1CAB84FB001172AA /* alimentumTests.swift */; };
 		7C1DA9C61CAB84FB001172AA /* alimentumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1DA9C51CAB84FB001172AA /* alimentumUITests.swift */; };
-		7CFAAB691CC193F700D4D189 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFAAB681CC193F700D4D189 /* Credentials.swift */; };
+		7C453DE31E1B632F00556334 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C453DE21E1B632F00556334 /* Credentials.swift */; };
 		A0E90DD0EC56F9C8190EF7B6 /* Pods_alimentum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D629BBEC30E39227DB0D6E0F /* Pods_alimentum.framework */; };
 		F40F81A41CAC536F0072A1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C581EC21CABE70C008B4ABB /* Main.storyboard */; };
 		F48AD5351CAC1BC200BD8FF2 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48AD5341CAC1BC200BD8FF2 /* YelpClient.swift */; };
@@ -56,8 +56,8 @@
 		7C1DA9C11CAB84FB001172AA /* alimentumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alimentumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1DA9C51CAB84FB001172AA /* alimentumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alimentumUITests.swift; sourceTree = "<group>"; };
 		7C1DA9C71CAB84FB001172AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C453DE21E1B632F00556334 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		7C581EC21CABE70C008B4ABB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		7CFAAB681CC193F700D4D189 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = ../../../Credentials.swift; sourceTree = "<group>"; };
 		D629BBEC30E39227DB0D6E0F /* Pods_alimentum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alimentum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DEBB8BB96009C5BCE1DEEF /* Pods-alimentum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alimentum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alimentum/Pods-alimentum.debug.xcconfig"; sourceTree = "<group>"; };
 		F48AD5341CAC1BC200BD8FF2 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 				7C1DA9AE1CAB84FB001172AA /* LaunchScreen.storyboard */,
 				7C1DA9A61CAB84FB001172AA /* FirstTime.storyboard */,
 				7C581EC21CABE70C008B4ABB /* Main.storyboard */,
+				7C453DE21E1B632F00556334 /* Credentials.swift */,
 				7C1DA9A21CAB84FB001172AA /* AppDelegate.swift */,
-				7CFAAB681CC193F700D4D189 /* Credentials.swift */,
 				F48E447B1CAE8DF5007C65DC /* OpeningViewController.swift */,
 				F48E44791CAE8685007C65DC /* IntroPageViewController.swift */,
 				F4AE7AEF1CABE58E00860526 /* MainViewController.swift */,
@@ -236,19 +236,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Joseph Park";
 				TargetAttributes = {
 					7C1DA99E1CAB84FB001172AA = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = CBJ8E98WM5;
+						DevelopmentTeam = FZ3E4G9DRA;
+						LastSwiftMigration = 0820;
 					};
 					7C1DA9B51CAB84FB001172AA = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = 7C1DA99E1CAB84FB001172AA;
 					};
 					7C1DA9C01CAB84FB001172AA = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = 7C1DA99E1CAB84FB001172AA;
 					};
 				};
@@ -356,7 +359,7 @@
 			files = (
 				F48E447C1CAE8DF5007C65DC /* OpeningViewController.swift in Sources */,
 				7C1DA9A31CAB84FB001172AA /* AppDelegate.swift in Sources */,
-				7CFAAB691CC193F700D4D189 /* Credentials.swift in Sources */,
+				7C453DE31E1B632F00556334 /* Credentials.swift in Sources */,
 				F4AE7AF01CABE58E00860526 /* BusinessListingTableViewCell.swift in Sources */,
 				7C1DA9AB1CAB84FB001172AA /* alimentum.xcdatamodeld in Sources */,
 				F48AD5351CAC1BC200BD8FF2 /* YelpClient.swift in Sources */,
@@ -430,8 +433,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -453,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -476,8 +481,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -493,9 +500,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -505,14 +513,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E9DEBB8BB96009C5BCE1DEEF /* Pods-alimentum.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = FZ3E4G9DRA;
 				INFOPLIST_FILE = alimentum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephpark.iosdohoproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -521,14 +532,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1ADCDA3148DA46A2D0F5B099 /* Pods-alimentum.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = FZ3E4G9DRA;
 				INFOPLIST_FILE = alimentum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephpark.iosdohoproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -541,6 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joseph.alimentumTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alimentum.app/alimentum";
 			};
 			name = Debug;
@@ -553,6 +568,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joseph.alimentumTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alimentum.app/alimentum";
 			};
 			name = Release;
@@ -564,6 +580,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joseph.alimentumUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = alimentum;
 			};
 			name = Debug;
@@ -575,6 +592,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joseph.alimentumUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = alimentum;
 			};
 			name = Release;

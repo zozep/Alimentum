@@ -36,7 +36,7 @@ class YelpAPIClient: NSObject {
     }
 
     /* Add GET request functionality with Yelp! API authorized search URL */
-    func searchPlacesWithParameters(searchParameters: Dictionary<String, String>, successSearch: (data: NSData, response: NSHTTPURLResponse) -> Void, failureSearch: (error: NSError) -> Void) {
+    func searchPlacesWithParameters(_ searchParameters: Dictionary<String, String>, successSearch: @escaping (_ data: NSData, _ response: HTTPURLResponse) -> Void, failureSearch: (_ error: NSError) -> Void) {
         clientOAuth!.get(yelpSearchUrl, parameters: searchParameters, success: successSearch, failure: failureSearch)
     }
 }

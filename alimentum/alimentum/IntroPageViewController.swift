@@ -16,9 +16,9 @@ import OAuthSwift
 protocol IntroPageViewControllerDelegate: class {
     
     /* Function that will be called to update current page count */
-    func introPageViewController(pageViewController: IntroPageViewController, didUpdatePageCount count: Int)
+    func introPageViewController(_ pageViewController: IntroPageViewController, didUpdatePageCount count: Int)
     
-    func introPageViewController(pageViewController: IntroPageViewController, didUpdatePageIndex index: Int)
+    func introPageViewController(_ pageViewController: IntroPageViewController, didUpdatePageIndex index: Int)
 }
 
 
@@ -44,26 +44,26 @@ class IntroPageViewController: UIPageViewController, UIPageViewControllerDataSou
         dataSource = self
         delegate = self
         
-        let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("launchedBefore")
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         
         if launchedBefore {
             let mainAppStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainVC = mainAppStoryboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
+            let mainVC = mainAppStoryboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
             
             //Present is done asynchronously in order to allow for current view controller to be added to the view hierarchy. Otherwise app breaks
             mainVC.checkLocationServices()
 
-            dispatch_async(dispatch_get_main_queue(), {
-                self.presentViewController(mainVC, animated: true, completion: nil)
+            DispatchQueue.main.async {
+                self.present(mainVC, animated: true, completion: nil)
 
-            })
+            }
             
         //If launchedBefore returns false/is not set, set value for launchedBefore to true and show introductory views
         } else {
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "launchedBefore")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
 
             if let firstViewController = orderedViewControllers.first {
-                setViewControllers([firstViewController],direction: .Forward, animated: true, completion: nil)
+                setViewControllers([firstViewController],direction: .forward, animated: true, completion: nil)
                 viewDelegate?.introPageViewController(self, didUpdatePageCount: orderedViewControllers.count)
             }
             initAppearance()
@@ -74,17 +74,17 @@ class IntroPageViewController: UIPageViewController, UIPageViewControllerDataSou
     
 //MARK: - UIPageViewControllerDelegate/DataSource functions
     
-    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool){
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool){
         
         if let firstViewController = viewControllers?.first,
-            let index = orderedViewControllers.indexOf(firstViewController) {
+            let index = orderedViewControllers.index(of: firstViewController) {
                 viewDelegate?.introPageViewController(self, didUpdatePageIndex: index)
             }
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {return nil}
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {return nil}
         let previousIndex = viewControllerIndex - 1
         guard previousIndex >= 0 else {return nil}
         guard orderedViewControllers.count > previousIndex else {return nil}
@@ -92,9 +92,9 @@ class IntroPageViewController: UIPageViewController, UIPageViewControllerDataSou
         return orderedViewControllers[previousIndex]
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {return nil}
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {return nil}
         let nextIndex = viewControllerIndex + 1
         let orderedViewControllersCount = orderedViewControllers.count
         guard orderedViewControllersCount != nextIndex else {return nil}
@@ -107,16 +107,16 @@ class IntroPageViewController: UIPageViewController, UIPageViewControllerDataSou
 //MARK:  - Custom functions
     
     /* Takes a parameter "identifier" of type string */
-    func newViewController(identifier: String) -> UIViewController {
+    func newViewController(_ identifier: String) -> UIViewController {
         
         //Returns view controller that matches identifier passed in as parameter
-        return UIStoryboard(name: "FirstTime", bundle: nil).instantiateViewControllerWithIdentifier(identifier)
+        return UIStoryboard(name: "FirstTime", bundle: nil).instantiateViewController(withIdentifier: identifier)
     }
     
     func initAppearance() -> Void {
         let background = CAGradientLayer().turquoiseColor()
         background.frame = self.view.bounds
-        self.view.layer.insertSublayer(background, atIndex: 0)
+        self.view.layer.insertSublayer(background, at: 0)
     }
 
 }
